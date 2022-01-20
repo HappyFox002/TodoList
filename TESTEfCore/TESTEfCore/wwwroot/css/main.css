@@ -10,46 +10,155 @@
 body {
     background-color: #537f82;
     color: white;
-
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contentMargin {
+    height:50px;
 }
 
 content {
-
+    display:flex;
+    flex-direction:row;
 }
 
 /*menu*/
-
 .menu {
-
     position: fixed;
     left: 0;
     right: 0;
-
     margin: 0;
     padding: 0;
-
     list-style-type: none;
-
-    width: 200px;
-    height: 100%;
-
+    width: 100%;
+    height: 50px;
     background-color: #2d3341;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #bacdd1;
 }
+
+    .menu li {
+        width: 150px;
+    }
+
+        .menu li a {
+            text-decoration:none;
+            color:inherit;
+        }
 
     .menu li a div {
         display: flex;
         align-items: center;
-        justify-content: left;
+        justify-content: center;
         width: 100%;
 
-        height: 40px;
-        transition: all ease-in 0.3s;
+        height: 100%;
+        transition: all ease-in 0.2s;
     }
 
         .menu li a div:hover {
             background-color: silver;
             color: #2d3341;
-            font-weight: bold;
         }
+
+/* Оформление листа задач*/
+
+.taskList {
+    width: 300px;
+    background-color: #2d3341;
+    height:100vh;
+
+    display: flex;
+    flex-direction:column;
+    justify-content:flex-start;
+}
+
+    .taskList .header {
+        margin: 0;
+        padding: 0;
+        font-size: 2em;
+        font-weight:bold;
+        height:50px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .taskList .task {
+        font-size: 1.5em;
+        height:50px;
+        width:100%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        transition:all ease-in 0.2s;
+    }
+
+        .taskList .task:hover {
+            background-color: silver;
+            color: #2d3341;
+        }
+
+.tActive {
+    background-color: silver;
+    color: #2d3341;
+}
+
+.taskDetailed {
+    width: 100%;
+    margin: 10px;
+    display: grid;
+    transform:translateX(-100vw);
+    z-index:-1;
+    grid-template-areas: "na na na na na ov ov ov ov ov"
+        "cu cu cu cu cu ov ov ov ov ov"
+        "cu cu cu cu cu ov ov ov ov ov"
+        "cu cu cu cu cu ov ov ov ov ov"
+        "cu cu cu cu cu ov ov ov ov ov"
+        "cu cu cu cu cu co co co co co"
+        "cu cu cu cu cu co co co co co"
+        "cu cu cu cu cu co co co co co"
+        "cu cu cu cu cu co co co co co"
+        "cu cu cu cu cu co co co co co";
+    grid-template-rows: repeat(10, 10%);
+    grid-template-columns: repeat(10, 10%);
+    transition: all linear 1s;
+}
+
+.tDOff {
+    transform: translateX(0);
+}
+
+    .taskDetailed .taskName {
+        grid-area: na;
+        margin: 10px;
+        background-color: #2d3341;
+
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+        font-size:2em;
+    }
+
+    .taskDetailed .currentTask {
+        grid-area: cu;
+        margin: 10px;
+        background-color: #2d3341;
+    }
+
+    .taskDetailed .overdueTask {
+        grid-area: ov;
+        margin: 10px;
+        background-color: #2d3341;
+    }
+
+    .taskDetailed .completedTask {
+        grid-area: co;
+        margin: 10px;
+        background-color: #2d3341;
+    }

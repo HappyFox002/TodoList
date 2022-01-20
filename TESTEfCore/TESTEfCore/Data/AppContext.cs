@@ -1,13 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using TESTEfCore.Models;
 
 namespace TESTEfCore.Data
 {
     public class AppContext : DbContext
     {
+       public DbSet<Task> Tasks { get; set; } = null!;
+
         public AppContext() {
             Database.EnsureCreated();
         }

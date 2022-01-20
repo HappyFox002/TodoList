@@ -1,0 +1,92 @@
+﻿/*
+    Модальное окно
+*/
+
+.modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    background-color: black;
+    opacity: 0.9;
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    transition: all ease-in 0.5s;
+}
+
+.mOff {
+    transform: translateY(-100vh);
+}
+
+.modal .newTask {
+    width: 400px;
+    height: 150px;
+    background-color: #bacdd1;
+    display: grid;
+    grid-template-areas: "header header header header"
+        "label input input input"
+        "accept accept close close";
+    grid-template-rows: repeat(3, 50px);
+    grid-template-columns: repeat(4, 100px);
+    color: #2d3341;
+}
+
+    .modal .newTask .header {
+        grid-area: header;
+        width: 100%;
+        height: 100%;
+
+        font-size:1.6em;
+
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .modal .newTask .label {
+        grid-area: label;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 1.2em;
+    }
+
+    .modal .newTask .input {
+        grid-area: input;
+        width: 100%;
+        margin: 14px 0;
+        width: 95%;
+    }
+
+    .modal .newTask .close {
+        grid-area: close;
+        width: 90%;
+        margin: 0 5%;
+        height: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-weight:bold;
+    }
+
+    .modal .newTask .accept {
+        grid-area: accept;
+        width: 90%;
+        margin: 0 5%;
+        height: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+    }

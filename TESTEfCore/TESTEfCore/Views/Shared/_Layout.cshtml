@@ -7,17 +7,34 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <link href="~/css/main.css" rel="stylesheet" />
+    <link href="~/css/modal.css" rel="stylesheet" />
+    <link href="~/css/other.css" rel="stylesheet" />
+
+    <script src="~/js/modal.js"></script>
+    <script src="~/js/task.js"></script>
 </head>
 <body>
+    <div class="modal modalNewTask mOff">
+        <form class="newTask" action="~/Home/NewTask">
+            <label class="header">Новая задача</label>
+            <label class="label">Название</label>
+            <input class="input" type="text" name="name"/>
+            <input id="addTaskClose" class="close" type="button" value="Закрыть"/>
+            <input class="accept" type="submit" value="Добавить"/>
+        </form>
+    </div>
     <ul class="menu">
-        <li><a><div>Пункт меню 1</div></a></li>
-        <li><a><div>Пункт меню 2</div></a></li>
-        <li><a><div>Пункт меню 3</div></a></li>
-        <li><a><div>Пункт меню 4</div></a></li>
+        <li><a id="addTask"><div>Создать задачу</div></a></li>
     </ul>
+    <div class="contentMargin">&nbsp;</div>
     <content>
         @RenderBody()
     </content>
 </body>
+
 </html>
