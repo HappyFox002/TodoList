@@ -36,7 +36,6 @@ C:\Users\DNK\source\repos\TESTEfCore\TESTEfCore\obj\Debug\net5.0\TESTEfCore.genr
 C:\Users\DNK\source\repos\TESTEfCore\TESTEfCore\obj\Debug\net5.0\TESTEfCore.csproj.CopyComplete
 D:\Code\github\TodoList\TESTEfCore\TESTEfCore\bin\Debug\net5.0\appsettings.Development.json
 D:\Code\github\TodoList\TESTEfCore\TESTEfCore\bin\Debug\net5.0\appsettings.json
-D:\Code\github\TodoList\TESTEfCore\TESTEfCore\bin\Debug\net5.0\TESTEfCore.StaticWebAssets.xml
 D:\Code\github\TodoList\TESTEfCore\TESTEfCore\bin\Debug\net5.0\TESTEfCore.exe
 D:\Code\github\TodoList\TESTEfCore\TESTEfCore\bin\Debug\net5.0\TESTEfCore.deps.json
 D:\Code\github\TodoList\TESTEfCore\TESTEfCore\bin\Debug\net5.0\TESTEfCore.runtimeconfig.json
@@ -140,3 +139,4 @@ D:\WEB\TodoList\TESTEfCore\TESTEfCore\obj\Debug\net5.0\ref\TESTEfCore.dll
 D:\WEB\TodoList\TESTEfCore\TESTEfCore\obj\Debug\net5.0\TESTEfCore.pdb
 D:\WEB\TodoList\TESTEfCore\TESTEfCore\obj\Debug\net5.0\TESTEfCore.genruntimeconfig.cache
 D:\WEB\TodoList\TESTEfCore\TESTEfCore\obj\Debug\net5.0\Razor\Views\Home\_Task.cshtml.g.cs
+D:\Code\github\TodoList\TESTEfCore\TESTEfCore\obj\Debug\net5.0\Razor\Views\Home\_Task.cshtml.g.cs
