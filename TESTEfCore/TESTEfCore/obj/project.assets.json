@@ -1449,24 +1449,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HappyFox\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\ДНК\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Code\\github\\TodoList\\TESTEfCore\\TESTEfCore\\TESTEfCore.csproj",
+      "projectUniqueName": "D:\\WEB\\TodoList\\TESTEfCore\\TESTEfCore\\TESTEfCore.csproj",
       "projectName": "TESTEfCore",
-      "projectPath": "D:\\Code\\github\\TodoList\\TESTEfCore\\TESTEfCore\\TESTEfCore.csproj",
-      "packagesPath": "C:\\Users\\HappyFox\\.nuget\\packages\\",
-      "outputPath": "D:\\Code\\github\\TodoList\\TESTEfCore\\TESTEfCore\\obj\\",
+      "projectPath": "D:\\WEB\\TodoList\\TESTEfCore\\TESTEfCore\\TESTEfCore.csproj",
+      "packagesPath": "C:\\Users\\ДНК\\.nuget\\packages\\",
+      "outputPath": "D:\\WEB\\TodoList\\TESTEfCore\\TESTEfCore\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\HappyFox\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\ДНК\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1507,12 +1502,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.13, 5.0.13]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"

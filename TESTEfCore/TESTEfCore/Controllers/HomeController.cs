@@ -11,7 +11,7 @@ namespace TESTEfCore.Controllers
     {
         public IActionResult Index()
         {
-            List<TESTEfCore.Models.Task> tasks = TasksData.GetTasks();
+            List<Models.Task> tasks = TasksData.GetTasks();
             return View(tasks);
         }
 
