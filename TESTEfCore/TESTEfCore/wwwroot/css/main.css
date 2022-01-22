@@ -133,32 +133,43 @@ content {
     transform: translateX(0);
 }
 
-    .taskDetailed .taskName {
-        grid-area: na;
-        margin: 10px;
-        background-color: #2d3341;
+.taskDetailed .taskName {
+    grid-area: na;
+    margin: 10px;
+    background-color: #2d3341;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    box-shadow: 2px 2px;
+}
 
-        display:flex;
-        justify-content:center;
-        align-items:center;
+.taskDetailed .currentTask {
+    grid-area: cu;
+    margin: 10px;
+    background-color: #2d3341;
+    box-shadow: 2px 2px;
+}
 
-        font-size:2em;
-    }
+.taskDetailed .overdueTask {
+    grid-area: ov;
+    margin: 10px;
+    background-color: #2d3341;
+    box-shadow: 2px 2px;
+}
 
-    .taskDetailed .currentTask {
-        grid-area: cu;
-        margin: 10px;
-        background-color: #2d3341;
-    }
+.taskDetailed .completedTask {
+    grid-area: co;
+    margin: 10px;
+    background-color: #2d3341;
+    box-shadow: 2px 2px;
+}
 
-    .taskDetailed .overdueTask {
-        grid-area: ov;
-        margin: 10px;
-        background-color: #2d3341;
-    }
-
-    .taskDetailed .completedTask {
-        grid-area: co;
-        margin: 10px;
-        background-color: #2d3341;
-    }
+.taskDetailedHeader {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px;
+    align-items: center;
+    font-size: 2em;
+    border-bottom: 2px solid #bacdd1;
+}

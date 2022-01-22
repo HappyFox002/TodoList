@@ -20,16 +20,17 @@
 </head>
 <body>
     <div class="modal modalNewTask mOff">
-        <form class="newTask" action="~/Home/NewTask">
+        <form class="newTask" action="~/Request/NewTask">
             <label class="header">Новая задача</label>
             <label class="label">Название</label>
             <input class="input" type="text" name="name"/>
             <input id="addTaskClose" class="close" type="button" value="Закрыть"/>
-            <input class="accept" type="submit" value="Добавить"/>
+            <input id="addTaskAccept" class="accept" type="button" value="Добавить"/>
         </form>
     </div>
     <ul class="menu">
         <li><a id="addTask"><div>Создать задачу</div></a></li>
+        <li><a id="delTask"><div>Удалить задачу</div></a></li>
     </ul>
     <div class="contentMargin">&nbsp;</div>
     <content>
