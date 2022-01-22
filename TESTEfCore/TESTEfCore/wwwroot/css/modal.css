@@ -22,6 +22,7 @@
 
 .mOff {
     transform: translateY(-100vh);
+    visibility:collapse;
 }
 
 .modal .newTask {

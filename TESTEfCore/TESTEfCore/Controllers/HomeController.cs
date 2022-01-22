@@ -9,7 +9,6 @@ namespace TESTEfCore.Controllers
     {
         public IActionResult Index()
         {
-            Startup.Logger.LogInformation("Index loading");
             List<Models.Task> tasks = TasksData.GetTasks();
             return View(tasks);
         }

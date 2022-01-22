@@ -22,6 +22,10 @@ $(document).ready(function () {
             AppendTask(task);
         }
     });
+
+    $('.purposeHeader').on('click', function () {
+        $('.purposeDesc').toggleClass('pDescOff');
+    });
 });
 
 /* Преобразование JSON в объект */
