@@ -1,0 +1,276 @@
+﻿/* Color scheme
+    #8d7666 - brown
+    #2d3341 - black
+    #537f82 - green
+    #bacdd1 - silver
+    #8da140 - boloto)
+*/
+
+/*main*/
+body {
+    background-color: #537f82;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contentMargin {
+    height:50px;
+}
+
+content {
+    display:flex;
+    flex-direction:row;
+}
+
+/*menu*/
+.menu {
+    position: fixed;
+    z-index:998;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+    height: 50px;
+    background-color: #2d3341;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #bacdd1;
+}
+
+    .menu li {
+        width: 150px;
+    }
+
+        .menu li a {
+            text-decoration:none;
+            color:inherit;
+        }
+
+    .menu li a div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        height: 100%;
+        transition: all ease-in 0.2s;
+        cursor: default;
+    }
+
+        .menu li a div:hover {
+            background-color: #bacdd1;
+            color: #2d3341;
+        }
+
+/* Оформление листа задач*/
+
+.taskList {
+    width: 300px;
+    background-color: #2d3341;
+    height:100vh;
+    z-index:1;
+
+    display: flex;
+    flex-direction:column;
+    justify-content:flex-start;
+}
+
+    .taskList .header {
+        margin: 0;
+        padding: 0;
+        font-size: 2em;
+        font-weight:bold;
+        min-height:50px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .taskList .task {
+        font-size: 1.5em;
+        min-height: 50px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all ease-in 0.2s;
+        cursor: default;
+    }
+
+        .taskList .task:hover {
+            background-color: silver;
+            color: #2d3341;
+        }
+
+.tActive {
+    background-color: silver;
+    color: #2d3341;
+}
+
+/* Окно задачи */
+
+.taskDetailed {
+    position: relative;
+    width: 100%;
+    margin: 10px;
+    display: grid;
+    transform: translateX(-100vw);
+    visibility:collapse;
+    grid-template-areas: "na na na na na ov ov ov ov ov"
+        "cu cu cu cu cu ov ov ov ov ov"
+        "cu cu cu cu cu ov ov ov ov ov"
+        "cu cu cu cu cu ov ov ov ov ov"
+        "cu cu cu cu cu ov ov ov ov ov"
+        "cu cu cu cu cu co co co co co"
+        "cu cu cu cu cu co co co co co"
+        "cu cu cu cu cu co co co co co"
+        "cu cu cu cu cu co co co co co"
+        "cu cu cu cu cu co co co co co";
+    grid-template-rows: repeat(10, 10%);
+    grid-template-columns: repeat(10, 10%);
+    transition: all linear 1s;
+}
+
+.tDOff {
+    visibility:visible;
+    transform: translateX(0);
+}
+
+.taskDetailed .taskName {
+    grid-area: na;
+    margin: 10px;
+    background-color: #2d3341;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    box-shadow: 2px 2px;
+}
+
+.taskDetailed .currentTask {
+    grid-area: cu;
+    margin: 10px;
+    background-color: #2d3341;
+    box-shadow: 2px 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+    .taskDetailed .overdueTask {
+        grid-area: ov;
+        margin: 10px;
+        background-color: #2d3341;
+        box-shadow: 2px 2px;
+        display: flex;
+        flex-direction: column;
+    }
+
+.taskDetailed .completedTask {
+    grid-area: co;
+    margin: 10px;
+    background-color: #2d3341;
+    box-shadow: 2px 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+.taskDetailedHeader {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+    align-items: center;
+    font-size: 2em;
+    border-bottom: 2px solid #bacdd1;
+}
+
+/* Цели */
+.purpose {
+    margin: 0 10px;
+    padding: 0 5px;
+    list-style-type: none;
+    width: calc(100%-30px);
+}
+
+    .purpose li {
+        width: 100%;
+        display:flex;
+        flex-direction:column;
+        padding: 5px 0;
+    }
+
+        .purpose li .purposeHeader {
+            width: calc(100%-20px);
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            border-left: 2px solid #bacdd1;
+            padding: 0 10px;
+            cursor: default;
+        }
+
+            .purpose li .purposeHeader span {
+                margin: 0 10px;
+                padding: 0 10px;
+                height:100%;
+                font-size:1.2em;
+                display:flex;
+                align-items:center;
+                flex-grow: 0;
+            }
+
+            .purpose li .purposeHeader .idPurpose {
+                display: none;
+            }
+
+            .purpose li .purposeHeader .grow {
+                flex-grow: 1;
+            }
+
+            .purpose li .purposeHeader .actBtn {
+                border: 2px solid #bacdd1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 20px;
+                height: 20px;
+                font-size: 2em;
+                padding: 6px;
+                margin: 2px;
+                transition: all ease-in 0.2s;
+                cursor: default;
+            }
+
+            .purpose li .purposeHeader:hover {
+                background-color: #bacdd1;
+                color: #2d3341;
+            }
+
+                .purpose li .purposeHeader:hover .actBtn {
+                    border: 2px solid #2d3341;
+                    color: #2d3341;
+                }
+
+                    .purpose li .purposeHeader:hover .actBtn:hover {
+                        background-color: #537f82;
+                        border: 2px solid #bacdd1;
+                        color: #bacdd1;
+                    }
+
+
+        .purpose li .purposeDesc {
+            background-color: #bacdd1;
+            font-size: 1.1em;
+            color: #2d3341;
+            padding: 10px;
+            text-align:justify;
+        }
+
+        .pDescOff {
+            display: none;
+        }
