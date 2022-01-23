@@ -186,9 +186,9 @@ function AppendPurpose(pName, pText, pDate) {
                 CreatePurpose(item);
             });
             $('.modalNewPurspose').toggleClass('mOff');
-            $('.modalNewPurspose').find('.newPurspose').find('inputTime').val('');
-            $('.modalNewPurspose').find('.newPurspose').find('inputName').val('');
-            $('.modalNewPurspose').find('.newPurspose').find('inputDesc').val('');
+            $('.modalNewPurspose').find('.newPurspose').find('.inputTime').val('');
+            $('.modalNewPurspose').find('.newPurspose').find('.inputName').val('');
+            $('.modalNewPurspose').find('.newPurspose').find('.inputDesc').val('');
         }
     });
 }
