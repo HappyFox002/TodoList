@@ -21,12 +21,25 @@
 </head>
 <body>
     <div class="modal modalNewTask mOff">
-        <form class="newTask" action="~/Request/NewTask">
+        <form class="newTask">
             <label class="header">Новая задача</label>
             <label class="label">Название</label>
             <input class="input" type="text" name="name"/>
             <input id="addTaskClose" class="close" type="button" value="Закрыть"/>
             <input id="addTaskAccept" class="accept" type="button" value="Добавить"/>
+        </form>
+    </div>
+    <div class="modal modalNewPurspose mOff">
+        <form class="newPurspose">
+            <label class="header">Новая цель</label>
+            <label class="labelTime">Срок</label>
+            <input class="inputTime" type="datetime-local" name="timeEnd"/>
+            <label class="labelName">Название</label>
+            <input class="inputName" type="text" name="name"/>
+            <label class="labelDesc">Описание</label>
+            <textarea class="inputDesc" name="desc"></textarea>
+            <input id="addPurposeClose" class="close" type="button" value="Закрыть"/>
+            <input id="addPurposeAccept" class="accept" type="button" value="Добавить"/>
         </form>
     </div>
     <ul class="menu">

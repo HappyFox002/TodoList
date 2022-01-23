@@ -58,6 +58,7 @@ content {
 
         height: 100%;
         transition: all ease-in 0.2s;
+        cursor: default;
     }
 
         .menu li a div:hover {
@@ -83,7 +84,7 @@ content {
         padding: 0;
         font-size: 2em;
         font-weight:bold;
-        height:50px;
+        min-height:50px;
 
         display: flex;
         align-items: center;
@@ -92,12 +93,13 @@ content {
 
     .taskList .task {
         font-size: 1.5em;
-        height:50px;
-        width:100%;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        transition:all ease-in 0.2s;
+        min-height: 50px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all ease-in 0.2s;
+        cursor: default;
     }
 
         .taskList .task:hover {
@@ -118,6 +120,7 @@ content {
     margin: 10px;
     display: grid;
     transform: translateX(-100vw);
+    visibility:collapse;
     grid-template-areas: "na na na na na ov ov ov ov ov"
         "cu cu cu cu cu ov ov ov ov ov"
         "cu cu cu cu cu ov ov ov ov ov"
@@ -134,6 +137,7 @@ content {
 }
 
 .tDOff {
+    visibility:visible;
     transform: translateX(0);
 }
 
@@ -177,8 +181,9 @@ content {
 
 .taskDetailedHeader {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     margin: 10px;
+    padding: 10px;
     align-items: center;
     font-size: 2em;
     border-bottom: 2px solid #bacdd1;
@@ -196,21 +201,76 @@ content {
         width: 100%;
         display:flex;
         flex-direction:column;
+        padding: 5px 0;
     }
 
         .purpose li .purposeHeader {
-            width: 100%;
-            height: 40px;
+            width: calc(100%-20px);
+            min-height: 40px;
             display: flex;
             align-items: center;
             border-left: 2px solid #bacdd1;
+            padding: 0 10px;
+            cursor: default;
         }
+
+            .purpose li .purposeHeader span {
+                margin: 0 10px;
+                padding: 0 10px;
+                height:100%;
+                font-size:1.2em;
+                display:flex;
+                align-items:center;
+                flex-grow: 0;
+            }
+
+            .purpose li .purposeHeader .idPurpose {
+                display: none;
+            }
+
+            .purpose li .purposeHeader .grow {
+                flex-grow: 1;
+            }
+
+            .purpose li .purposeHeader .actBtn {
+                border: 2px solid #bacdd1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 20px;
+                height: 20px;
+                font-size: 2em;
+                padding: 6px;
+                margin: 2px;
+                transition: all ease-in 0.2s;
+                cursor: default;
+            }
 
             .purpose li .purposeHeader:hover {
                 background-color: #bacdd1;
                 color: #2d3341;
             }
 
-.pDescOff {
-    display:none;
-}
+                .purpose li .purposeHeader:hover .actBtn {
+                    border: 2px solid #2d3341;
+                    color: #2d3341;
+                }
+
+                    .purpose li .purposeHeader:hover .actBtn:hover {
+                        background-color: #537f82;
+                        border: 2px solid #bacdd1;
+                        color: #bacdd1;
+                    }
+
+
+        .purpose li .purposeDesc {
+            background-color: #bacdd1;
+            font-size: 1.1em;
+            color: #2d3341;
+            padding: 10px;
+            text-align:justify;
+        }
+
+        .pDescOff {
+            display: none;
+        }

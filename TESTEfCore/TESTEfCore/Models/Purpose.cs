@@ -4,13 +4,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TESTEfCore.Models
 {
-    public enum PurposeStatus { 
+    public enum PurposeStatus {
         CurrentTask = 0,
         OverdueTask,
         CompletedTask
     }
 
-    [Index("Header", IsUnique = true, Name = "uHeader")]
+    [Index(new string[]{"Header", "TaskId"}, IsUnique = true, Name = "uPurpose")]
     public class Purpose
     {
         [Key]
